@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel, Container, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { FaGamepad, FaTags, FaDownload, FaVrCardboard, FaPlaystation, FaPlusCircle } from "react-icons/fa";
 import "./Home.css"; // Custom CSS for styling
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -58,6 +58,20 @@ const Home = () => {
       image: "https://image.api.playstation.com/pr/bam-art/195/045/1b5c2d3e-4c6d-4e7f-a5b9-3d2e5c4b3a1b.jpg?w=5000&thumb=false",
     },
   ];
+
+  const categories = [
+    { id: "ps5-games", title: "Games", icon: <FaPlaystation />, label: "PS5" },
+    { id: "enhanced-games", title: "Enhanced games", icon: <FaGamepad /> },
+    { id: "all-deals", title: "All Deals", icon: <FaTags /> },
+    { id: "add-ons", title: "Add-ons", icon: <FaDownload /> },
+    { id: "free-to-play", title: "Free to Play", icon: <FaGamepad /> },
+    { id: "psvr", title: "PS VR2", icon: <FaVrCardboard /> },
+    { id: "ps-plus", title: "PS Plus", icon: <FaPlusCircle /> },
+    { id: "ps4-games", title: "Games", icon: <FaPlaystation />, label: "PS4" },
+  ];
+
+
+
 
   return (
     <Container className="home-page">
@@ -121,6 +135,25 @@ const Home = () => {
           </Card>
         </Col>
       </Row>
+
+      {/* Categories Section */}
+      <div className="section-header">
+        <h2>Categories</h2>
+      </div>
+      <Row className="category-grid">
+        {categories.map((category, index) => (
+          <Col key={index} xs={6} md={3} className="p-2">
+            <Card className="category-card" onClick={() => navigate(`/category/${category.id}`)}>
+              <div className="category-icon">{category.icon}</div>
+              <Card.Body>
+                <Card.Title>{category.title}</Card.Title>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+      
+      
     </Container>
   );
 };

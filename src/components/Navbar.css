@@ -1,0 +1,127 @@
+/* Main Navigation */
+.ps-navbar {
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ps-logo {
+    color: blue;
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: blue;
+  }
+  
+  /* Icons Section */
+  .nav-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .sign-in-btn {
+    background-color: blue;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .sign-in-btn:hover {
+    background-color: darkblue;
+  }
+  
+  /* Games Dropdown */
+  .games-dropdown {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .game-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .game-item:hover {
+    color: blue;
+  }
+  
+  .game-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .game-item span {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  /* 📱 RESPONSIVE STYLING */
+  
+  /* Mobile screens (max-width: 991px) */
+  @media (max-width: 991px) {
+    .navbar-toggler {
+      border: none;
+      font-size: 1.5rem;
+    }
+  
+    .nav-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 15px;
+    }
+  
+    .games-dropdown {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .game-item {
+      margin-bottom: 10px;
+    }
+  
+    .sign-in-btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Tablet screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    .ps-navbar {
+      padding: 5px 0;
+    }
+  
+    .search-icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  
+    .game-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  

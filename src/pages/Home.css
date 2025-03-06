@@ -1,0 +1,87 @@
+/* Navigation Bar */
+.navbar {
+    padding: 15px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+    font-weight: 500;
+  }
+  
+  .nav-link.active {
+    border-bottom: 2px solid black;
+  }
+  
+  /* Banner Section */
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+  
+  .banner-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+  }
+  
+  .banner-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .banner-content .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  /* Game Cards */
+  .game-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .game-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .game-card h3 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
